@@ -153,10 +153,13 @@ function printCart() {
             <tr>
 				<th scope="row">${cart[product].name}</th>
 				<td>$${cart[product].price}</td>
-				<td>${cart[product].quantity}</td>
-				<td class="d-flex justify-content-between">
-                ${(cart[product].subtotalWithDiscount) ? `$${cart[product].subtotalWithDiscount} (<s>$${cart[product].price * cart[product].quantity}</s>)` 
-                    : `$${cart[product].price * cart[product].quantity}`}</td>
+				<td><a href="#" onclick="removeFromCart(${cart[product].id})"><i class="fas fa-minus-circle"></i></a> 
+                ${cart[product].quantity} 
+                <i class="fas fa-plus-circle" style="cursor: pointer;" onclick="addFromCart(${cart[product].id})"></i></td>
+				<td>
+                <span>${(cart[product].subtotalWithDiscount) ? `$${cart[product].subtotalWithDiscount} (<s>$${cart[product].price * cart[product].quantity}</s>)` 
+                    : `$${cart[product].price * cart[product].quantity}`}</span>
+                <button type="button" class="btn btn-danger btn-sm" onclick="removeAllFromCart(${cart[product].id})"><i class="fas fa-trash"></i></button></td>
             </tr>
         `;
         cartList.innerHTML += productHtml;
@@ -181,6 +184,33 @@ function countCart() {
 // Exercise 7
 function removeFromCart(id) {
 
+    for (const product in cart) {
+        if (cart[product].id == id) {
+            cart[product].quantity--;
+            if (cart[product].quantity == 0) {
+                cart.splice(product, 1);
+            }
+            calculateTotal()
+            open_modal()
+            return ;
+        }
+    }
+}
+
+function addFromCart(id) {
+    buy(id);
+    printCart();
+}
+
+function removeAllFromCart(id) {
+    for (const product in cart) {
+        if (cart[product].id == id) {
+                cart.splice(product, 1);
+        }
+            calculateTotal()
+            open_modal()
+            return ;
+    }
 }
 
 function open_modal() {
