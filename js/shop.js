@@ -150,16 +150,17 @@ function printCart() {
 
     for (const product in cart) {
         let productHtml = `
-            <tr>
-				<th scope="row">${cart[product].name}</th>
+            <tr class="align-middle">
+				<th scope="row" class="text-nowrap">${cart[product].name}</th>
 				<td>$${cart[product].price}</td>
-				<td><a href="#" onclick="removeFromCart(${cart[product].id})"><i class="fas fa-minus-circle"></i></a> 
+				<td><div class="d-flex flex-nowrap align-items-center">
+                <i class="fas fa-minus-circle me-1 text-black-50" style="cursor: pointer;" onclick="removeFromCart(${cart[product].id})"></i>
                 ${cart[product].quantity} 
-                <i class="fas fa-plus-circle" style="cursor: pointer;" onclick="addFromCart(${cart[product].id})"></i></td>
-				<td>
+                <i class="fas fa-plus-circle ms-1 text-black-50" style="cursor: pointer;" onclick="addFromCart(${cart[product].id})"></i> </div></td>
+				<td class="d-flex justify-content-between flex-nowrap align-items-center">
                 <span>${(cart[product].subtotalWithDiscount) ? `$${cart[product].subtotalWithDiscount} (<s>$${cart[product].price * cart[product].quantity}</s>)` 
                     : `$${cart[product].price * cart[product].quantity}`}</span>
-                <button type="button" class="btn btn-danger btn-sm" onclick="removeAllFromCart(${cart[product].id})"><i class="fas fa-trash"></i></button></td>
+                <button type="button" class="btn btn-danger" onclick="removeAllFromCart(${cart[product].id})"><i class="fas fa-trash"></i></button></td>
             </tr>
         `;
         cartList.innerHTML += productHtml;
