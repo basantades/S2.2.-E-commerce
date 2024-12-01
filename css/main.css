@@ -4,6 +4,7 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11659,4 +11660,48 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 .fa-minus-circle:hover {
   color: #215770 !important;
+}
+
+.bg-gradient {
+  background: linear-gradient(30deg, #215770, #0f2c3a) !important;
+  border-radius: 20px;
+}
+
+.icon-background {
+  min-height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-background::before {
+  content: "\f636";
+  font-family: "bootstrap-icons";
+  font-size: 170px;
+  color: rgba(33, 87, 112, 0.8);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  transform: translate(-20%, -55%);
+}
+
+.icono2 .icon-background::before {
+  content: "\f12e";
+  font-size: 130px;
+  transform: translate(-20%, -53%);
+}
+
+.icono3 .icon-background::before {
+  content: "\f407";
+  font-size: 150px;
+}
+
+.icono4 .icon-background::before {
+  content: "\f597";
+  font-size: 150px;
+}
+
+form {
+  border: 2px solid #e0f2fa !important;
+  border-radius: 0;
 }/*# sourceMappingURL=main.css.map */

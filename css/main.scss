@@ -86,3 +86,56 @@ h1, h2, h3, h4, h5 {
   .fa-minus-circle:hover {
     color: $color-principal !important;
   }
+
+
+//   Checkout
+
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+
+.bg-gradient {
+    // background: #215770;
+    background: linear-gradient(30deg, #215770, #0f2c3a) !important;
+    border-radius: 20px;
+}
+
+.icon-background {
+    min-height: 150px;
+    position: relative;
+    overflow: hidden;
+  }
+.icon-background::before {
+    content: "\F636"; 
+    font-family: "bootstrap-icons";
+    font-size: 170px; 
+    color: rgba(33, 87, 112, 0.8);    
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    transform: translate(-20%, -55%);
+}
+
+.icono2 .icon-background::before {
+    content: "\F12E"; 
+    font-size: 130px; 
+    transform: translate(-20%, -53%);
+
+}
+
+.icono3 .icon-background::before {
+    content: "\F407"; 
+    font-size: 150px; 
+
+}
+
+.icono4 .icon-background::before {
+    content: "\F597"; 
+    font-size: 150px; 
+
+}
+
+form {
+    border: 2px solid $color-claro !important;
+    border-radius: 0;
+}

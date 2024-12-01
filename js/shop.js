@@ -159,14 +159,14 @@ function printCart() {
                 <i class="fas fa-plus-circle ms-1 text-black-50" style="cursor: pointer;" onclick="addFromCart(${cart[product].id})"></i> </div></td>
 				<td class="d-flex justify-content-between flex-nowrap align-items-center">
                 <span>${(cart[product].subtotalWithDiscount) ? `$${cart[product].subtotalWithDiscount} (<s>$${cart[product].price * cart[product].quantity}</s>)` 
-                    : `$${cart[product].price * cart[product].quantity}`}</span>
+                    : `$${(cart[product].price * cart[product].quantity).toFixed(2)}`}</span>
                 <button type="button" class="btn btn-danger" onclick="removeAllFromCart(${cart[product].id})"><i class="fas fa-trash"></i></button></td>
             </tr>
         `;
         cartList.innerHTML += productHtml;
     }
 
-    totalHtml.innerHTML = `${total}`;
+    totalHtml.innerHTML = `${total.toFixed(2)}`;
 }
 
 function countCart() {
@@ -186,9 +186,9 @@ function countCart() {
 function removeFromCart(id) {
 
     for (const product in cart) {
-        if (cart[product].id == id) {
+        if (cart[product].id === id) {
             cart[product].quantity--;
-            if (cart[product].quantity == 0) {
+            if (cart[product].quantity === 0) {
                 cart.splice(product, 1);
             }
             calculateTotal()
@@ -205,13 +205,13 @@ function addFromCart(id) {
 
 function removeAllFromCart(id) {
     for (const product in cart) {
-        if (cart[product].id == id) {
+        if (cart[product].id === id) {
                 cart.splice(product, 1);
         }
-            calculateTotal()
-            open_modal()
-            return ;
     }
+    calculateTotal()
+    open_modal()
+    return ;
 }
 
 function open_modal() {

@@ -22,7 +22,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 	<!-- Navigation-->
 	<div class="w-100 position-fixed z-3">
 	<nav class="navbar py-3 py-lg-0 navbar-dark bg-dark navbar-expand-lg" id="navbar-example2">
@@ -68,27 +68,11 @@
 	<div class="pattern"></div>
 
 	<div class="container">
-		<h1 class="text-center head m-4">Checkout Page</h1>
+		<h1 class="text-center head m-5">Checkout Page</h1>
 
-		<div class="row mr-0">
-			<div class="col-sm-6">
-				<h3 class="my-3 bord shadow text-center"><i class="fas fa-dollar-sign p-2"></i>Cash on Delivery</h3>
-			</div>
-			<div class="col-sm-6 ">
-				<h3 class="my-3 bord shadow text-center"><i class="fas fa-arrows-alt-h p-2"></i>100% Return</h3>
-			</div>
-		</div>
-
-		<div class="row mr-0">
-			<div class="col-sm-6">
-				<h3 class="my-3 bord shadow text-center"><i class="far fa-thumbs-up p-2"></i>Quality Assured</h3>
-			</div>
-			<div class="col-sm-6 ">
-				<h3 class="my-3 bord shadow text-center"><i class="fas fa-stopwatch p-2"></i>Delivery on time</h3>
-			</div>
-		</div>
-		<form class="form bg-white">
-			<div class="row bord p-5 shadow m-5">
+		  
+		<form class="form bg-white my-5 mx-lg-4">
+			<div class="row py-3 m-2 mx-lg-5">
 				<div class="col-sm-6">
 					<div class="mt-3">
 						<label for="fName" class="form-label">First Name:</label>
@@ -134,18 +118,45 @@
 					</div>
 				</div>
 				<div class="col-12 mt-4 final">
-					<button type="submit" id="btn" class="p-2 px-4 btn btn-primary shadow-lg float-end" onclick="validate(event)">
+					<button type="submit" id="btn" class="p-2 px-4 btn btn-primary float-end" onclick="validate(event)">
 						<i class="fas fa-cart-arrow-down p-2"></i>Save
 					</button>
 				</div>
 			</div>
 		</form>
 
+		<div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4 g-3 g-lg-5 mx-3">
+			<div class="col">
+			  	<div class="p-3 text-center bg-gradient icon-background d-flex flex-column justify-content-center">
+					<!-- <i class="fas fa-dollar-sign fs-1 text-primary mb-2"></i> -->
+					<h3 class="text-light fw-bolder z-3">Cash on <br>Delivery</h3>
+			  	</div>
+			</div>
+			<div class="col icono2">
+				<div class="p-3 text-center bg-gradient icon-background d-flex flex-column justify-content-center">
+					<!-- <i class="fas fa-arrows-alt-h fs-1 text-light mb-2"></i> -->
+					<h3 class="text-light fw-bold z-3">100% <br>Return</h3>
+			  	</div>
+			</div>
+			<div class="col icono3">
+				<div class="p-3 text-center bg-gradient icon-background d-flex flex-column justify-content-center">
+					<!-- <i class="far fa-thumbs-up fs-1 text-light mb-2"></i> -->
+					<h3 class="text-light fw-bold z-3">Quality <br>Assured</h3>
+			  	</div>
+			</div>
+			<div class="col icono4">
+				<div class="p-3 text-center bg-gradient icon-background d-flex flex-column justify-content-center">
+					<!-- <i class="fas fa-stopwatch fs-1 text-light mb-2"></i> -->
+					<h3 class="text-light fw-bold z-3">Delivery <br>on Time</h3>
+			  	</div>
+			</div>
+		  </div>
+
 	</div>
 
 
 	<!-- Footer-->
-	<footer class="py-3 bg-dark">
+	<footer class="py-3 bg-dark mt-auto">
 		<div class="container">
 			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
 		</div>
