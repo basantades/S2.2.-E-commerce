@@ -1,5 +1,5 @@
 $color-principal: #215770;
-$color-secundario: #a5cfe2;
+$color-secundario: #f3c221;
 $color-oscuro: #0f2c3a;
 $color-claro: #e0f2fa;
 
@@ -8,29 +8,34 @@ $theme-colors: (
   "primary": $color-principal,
   "secondary": $color-secundario,
   "dark": $color-oscuro,
-  "light": $color-secundario
+  "light": $color-claro
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
   color: $color-principal;
 }
 
-h1 {
-  color: $color-secundario;
+.nav-link:hover {
+    color: $color-secundario;
 }
-
+.active:hover {
+    color: $color-secundario !important;
+}
 .margen-nav {
     height: 70px;
   }
 
-.card {
-  border: none;
-  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.06);
-  border-radius: 8px; 
-}
+.img-hero {
+    background: linear-gradient(rgba(15, 44, 58, 0.75), rgba(15, 44, 58, 0.95)), 
+    url(../images/fondo.tienda.webp);
+    background-size: cover;
+    background-position: center;
+    background-color: $color-oscuro;
+
+  }
 
 
 .pattern {
@@ -39,8 +44,45 @@ h1 {
     width: 100%;
     z-index: -1;
     background-color: $color-claro;
-    opacity: 0.6;
-    background-size: 60px 60px;
-    background-image: repeating-linear-gradient(45deg, $color-claro 0, $color-claro 1px, #fff 0, #fff 50%);
+    opacity: 0.2;
+    background-size: 80px 80px;
+    background-image: repeating-linear-gradient(45deg, $color-claro 0, $color-claro 20px, #fff 0, #fff 50%);
 }
 
+.card {
+    border: none;
+    // box-shadow: 0 18px 32px rgba(0, 0, 0, 0.06);
+    border-radius: 20px 20px 0 0; 
+  }
+
+.card-img-top {
+    border-radius: 20px 20px 0 0; 
+}
+.card-body {
+    border-left: 2px solid $color-claro;
+    border-right: 2px solid $color-claro;
+
+  }
+.card-footer {
+    border: 2px solid $color-claro;
+    border-radius: 0;
+}
+  
+.btn-primary:hover {
+    background-color: $color-secundario;
+    border-color: $color-secundario;
+    color: $color-oscuro;
+  }
+
+.btn-secondary:hover {
+    background-color: $color-claro;
+    border-color: $color-claro;
+  }
+
+  .fa-plus-circle:hover {
+    color: $color-principal !important;
+  }
+
+  .fa-minus-circle:hover {
+    color: $color-principal !important;
+  }
