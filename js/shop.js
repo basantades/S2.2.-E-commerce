@@ -155,7 +155,7 @@ function printCart() {
             <tr class="align-middle">
 				<th scope="row">${cart[product].name}</th>
 				<td>$${cart[product].price}</td>
-				<td><div class="d-flex flex-nowrap align-items-center">
+				<td><div class="d-flex flex-nowrap align-items-center justify-content-between py-2 min-w-80">
                 <i class="fas fa-minus-circle fs-4 me-2 text-black-50" style="cursor: pointer;" onclick="removeFromCart(${cart[product].id})"></i>
                 ${cart[product].quantity} 
                 <i class="fas fa-plus-circle fs-4 ms-2 text-black-50" style="cursor: pointer;" onclick="addFromCart(${cart[product].id})"></i> </div></td>

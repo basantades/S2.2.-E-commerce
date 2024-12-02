@@ -79,16 +79,20 @@ h1, h2, h3, h4, h5 {
     border-color: $color-claro;
   }
 
-  .fa-plus-circle:hover {
+.fa-plus-circle:hover {
     color: $color-principal !important;
   }
 
-  .fa-minus-circle:hover {
+.fa-minus-circle:hover {
     color: $color-principal !important;
   }
   
-  .fa-times-circle:hover {
+.fa-times-circle:hover {
     color: #dc3545 !important;
+  }
+.min-w-80 {
+    min-width: 80px;
+    max-width: 90px
   }
 
 
