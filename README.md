@@ -1,66 +1,51 @@
-# Sprint 2 IT Academy | Shop
+# S2.2. E-commerce
 
-## Introduction
+## Descripción del Proyecto
 
-A company in the e-commerce sector has asked us for a web application that allows them to offer the purchase of their products through the internet.
+Este proyecto implementa una tienda en línea utilizando **HTML**, **CSS**, **Bootstrap**, y **JavaScript**. Se enfoca en la creación de un diseño responsivo, la integración de funcionalidades interactivas y el uso de Sass para optimizar los estilos.
 
-You will be in charge of setting up an initial demo version of the application for the client: management of the shopping cart and the application of the promotions on the final price. You have 1 week to finish this part of sprint (2.2).
+### Características
 
-<br>
+- **E-commerce Responsivo**: El diseño se adapta a diferentes tamaños de pantalla (escritorio, tablet y móvil) utilizando Bootstrap y media queries.
+- **Bootstrap 5**: Utilización de componentes predefinidos para acelerar el desarrollo, como menús, tarjetas de productos y formularios.
+- **Sass**: Organización modular de estilos mediante Sass, lo que facilita la personalización y reutilización de código.
+- **JavaScript**: Implementación de funcionalidades como manejo de carrito, promociones y validaciones.
+- **Estructura Modular**: Código organizado para mejorar la mantenibilidad y escalabilidad del proyecto.
 
-## Requirements
+## Estructura del Proyecto
 
+La estructura de archivos y carpetas es la siguiente:
 
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-shop
+```
+/S2.2.-E-commerce
+├── index.html # Página principal de la tienda 
+├── checkout.html # Página de checkout 
+├── /css # Carpeta para estilos CSS 
+│   ├── main.css # Estilos CSS principales compilados desde Sass 
+│   ├── main.css.map # Mapa fuente para depuración 
+│   ├── main.scss # Archivo principal de Sass que importa otros parciales 
+│   └── styles.css # Archivo inicial de estilos 
+├── /images # Carpeta para almacenar imágenes 
+├── /js # Carpeta para scripts JavaScript 
+│   ├── checkout.js # Funcionalidad para la página de checkout 
+│   └── shop.js # Funcionalidad principal para la tienda 
+├── .gitignore # Archivos y carpetas ignorados por Git 
+├── package-lock.json # Archivo generado automáticamente para gestión de dependencias 
+├── package.json # Archivo de configuración para npm 
+└── README.md # Este archivo
 ```
 
-2. Unlink your repo from the itacademy repository.
-(Explanation: You have to upload the code to your GitHub repository, not to the IT Academy. That's why you have to unlink your project from IT Academy GitHub with the following command)
+## Tecnologías Utilizadas
 
-```bash
-$ git remote rm origin
-```
+- **HTML5**: Lenguaje de marcado utilizado para la estructura de la página web.
+- **CSS3**: Para los estilos visuales y la creación del diseño responsivo.
+- **Bootstrap 5**: Framework de diseño que proporciona componentes predefinidos para acelerar el desarrollo.
+- **Sass**: Preprocesador CSS que permite escribir estilos más organizados y reutilizables.
+- **JavaScript**: Lenguaje de programación utilizado para la interactividad, como el menú desplegable y la validación de formularios.
+- **jQuery** (si es necesario para algunos componentes de Bootstrap): Para facilitar la manipulación del DOM y la interactividad.
 
-3. Link your repo to the repository you have to create in your github account
-(Explanation: Now your project is not linked to any remote repository. In order to upload your code, you have to link your project to the new repository created on github.com using the following command)
+## Instalación
 
-```bash
-$ git remote add origin <your repo name!>
-```
-
-<br>
-
-## Submission
-
-1. It is necessary to upload each exercise in a separate commit. The commit name must clearly indicate its content.
-
-2. Upload the link to your GitHub repository to the virtual campus, enabling your mentor to review and provide feedback.
-
-
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-
-## Instructions
-
-You have the following indications from the frontend manager:
-
-- You have prepared the base of the project on which you will work: https://github.com/IT-Academy-BCN/starter-code-frontend-shop
-
-- The base of the project on which you will work has already created all the files, and an initial version of the interface, so you can focus on programming the logic.
-
-- As at the moment we don't consume data from a server using an API, we will work with hardcoded data in the application. For the moment we will implement the logic using a small group of 9 products divided in 3 sections.
-
-- Except for the last level, showing the result of the functions by console is enough.
-
-- The logic to implement will be placed in the src/grocery.js and src/checkout.js files. You will see that the built in functions have already been created for you to implement them.
-
-- It is forbidden to copy the code, since this way you don't learn anything. Furthermore, as you can see, the second release of sprint 5 is a mini-level test with the mentor, in which you will have to demonstrate live that you have acquired the javascript concepts. Don't worry, if you work on the releases you won't have any problems.
+   ```bash
+   git clone https://github.com/basantades/S2.2.-E-commerce.git
+   ```

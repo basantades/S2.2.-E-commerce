@@ -162,7 +162,7 @@ function printCart() {
 				<td><div class="d-flex justify-content-between flex-nowrap align-items-center">
                 <span>${(cart[product].subtotalWithDiscount) ? `$${cart[product].subtotalWithDiscount} (<s>$${cart[product].price * cart[product].quantity}</s>)` 
                     : `$${(cart[product].price * cart[product].quantity).toFixed(2)}`}</span>
-                <i class="bi bi-x-circle fs-3 d-none d-sm-block" style="cursor: pointer;" onclick="removeAllFromCart(${cart[product].id})"></i></td>
+                <i class="fas fa-times-circle fs-4 d-none d-sm-block" style="cursor: pointer;" onclick="removeAllFromCart(${cart[product].id})"></i></td>
             </tr>
         `;
         cartList.innerHTML += productHtml;
