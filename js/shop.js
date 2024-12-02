@@ -156,13 +156,13 @@ function printCart() {
 				<th scope="row">${cart[product].name}</th>
 				<td>$${cart[product].price}</td>
 				<td><div class="d-flex flex-nowrap align-items-center">
-                <i class="fas fa-minus-circle me-1 text-black-50" style="cursor: pointer;" onclick="removeFromCart(${cart[product].id})"></i>
+                <i class="fas fa-minus-circle fs-4 me-2 text-black-50" style="cursor: pointer;" onclick="removeFromCart(${cart[product].id})"></i>
                 ${cart[product].quantity} 
-                <i class="fas fa-plus-circle ms-1 text-black-50" style="cursor: pointer;" onclick="addFromCart(${cart[product].id})"></i> </div></td>
+                <i class="fas fa-plus-circle fs-4 ms-2 text-black-50" style="cursor: pointer;" onclick="addFromCart(${cart[product].id})"></i> </div></td>
 				<td><div class="d-flex justify-content-between flex-nowrap align-items-center">
                 <span>${(cart[product].subtotalWithDiscount) ? `$${cart[product].subtotalWithDiscount} (<s>$${cart[product].price * cart[product].quantity}</s>)` 
                     : `$${(cart[product].price * cart[product].quantity).toFixed(2)}`}</span>
-                <button type="button" class="btn btn-danger" onclick="removeAllFromCart(${cart[product].id})"><i class="fas fa-trash"></i></button></div></td>
+                <i class="bi bi-x-circle fs-3 d-none d-sm-block" style="cursor: pointer;" onclick="removeAllFromCart(${cart[product].id})"></i></td>
             </tr>
         `;
         cartList.innerHTML += productHtml;

@@ -11662,6 +11662,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   color: #215770 !important;
 }
 
+.bi-x-circle:hover {
+  color: #dc3545 !important;
+}
+
 .bg-gradient {
   background: linear-gradient(30deg, #215770, #0f2c3a) !important;
   border-radius: 20px;

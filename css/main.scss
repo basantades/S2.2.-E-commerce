@@ -86,6 +86,10 @@ h1, h2, h3, h4, h5 {
   .fa-minus-circle:hover {
     color: $color-principal !important;
   }
+  
+  .bi-x-circle:hover {
+    color: #dc3545 !important;
+  }
 
 
 //   Checkout
@@ -115,24 +119,19 @@ h1, h2, h3, h4, h5 {
     left: 0;
     transform: translate(-20%, -55%);
 }
-
 .icono2 .icon-background::before {
     content: "\F12E"; 
     font-size: 130px; 
     transform: translate(-20%, -53%);
 
 }
-
 .icono3 .icon-background::before {
     content: "\F407"; 
     font-size: 150px; 
-
 }
-
 .icono4 .icon-background::before {
     content: "\F597"; 
     font-size: 150px; 
-
 }
 
 form {
