@@ -25,7 +25,7 @@ function validate(event) {
 		fName.classList.add('is-valid');
 	}
 
-	if(fEmail.value.length < 3 || !fEmail.value.includes("@")){
+	if(fEmail.value.length < 3 || !fEmail.value.includes("@") || !fEmail.value.includes(".")){
 		error = true;
 		fEmail.classList.add('is-invalid');
 	} else {
