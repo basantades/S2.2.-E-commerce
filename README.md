@@ -1,6 +1,8 @@
 # S2.2. E-commerce
 
-![Captura de pantalla](images/screenshot.png)
+<p align="center">
+  <img src="images/screenshot.jpg" alt="Captura de pantalla" />
+</p>
 
 ## 📄 Descripción
 
